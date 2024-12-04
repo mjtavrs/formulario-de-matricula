@@ -1,4 +1,5 @@
 * {
+  color: #292524;
   font-family: "Poppins", sans-serif;
 }
 
@@ -7,8 +8,69 @@ h1, h2, h3, h4 {
   font-weight: 800;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  color: #57534e;
+  font-size: 1rem;
+  line-height: 150%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+body main {
+  display: flex;
+  height: inherit;
+  overflow: hidden;
+}
+body main #formContainer, body main aside {
+  padding: 4rem;
+}
+body main #formContainer {
+  flex: 1;
+  overflow-y: scroll;
+}
+body main aside {
+  background-color: #fee7d6;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+body main aside #asideHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+body main aside #asideHeader img {
+  width: 12.5rem;
+}
+body main aside #asideHeader h1 span {
+  color: #e43a12;
+}
+body main aside #illustration {
+  width: 100%;
 }/*# sourceMappingURL=global.css.map */
