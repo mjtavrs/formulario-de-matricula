@@ -1,1 +1,14 @@
-/*# sourceMappingURL=global.css.map */
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  line-height: 120%;
+  font-weight: 800;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=global.css.map */
