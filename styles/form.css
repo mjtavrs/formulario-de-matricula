@@ -80,6 +80,52 @@ body main #formContainer form {
   flex-direction: column;
   gap: 3rem;
 }
+body main #formContainer form .formCard {
+  border: 1px solid #d6d3d1;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  position: relative;
+}
+body main #formContainer form .formCard input {
+  position: absolute;
+  height: 1.5rem;
+  left: 0;
+  transform: translate(0.5rem, 0.5rem);
+  top: 0;
+  width: 1.5rem;
+}
+body main #formContainer form .formCard label {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+body main #formContainer form .formCard label img {
+  margin-top: 1.5rem;
+  width: 3rem;
+}
+body main #formContainer form .formCard label span {
+  color: #57534e;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+body main #formContainer form .formCard:has(input[type=radio]:checked) {
+  border: 1px solid #f3541c;
+  box-shadow: inset 0px 0px 0px 1px #f3541c;
+}
+body main #formContainer form #admissionOptions #schoolShiftContainer #schoolShiftOptions {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+body main #formContainer form #admissionOptions #schoolSportsContainer #schoolSportsOptions {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
 body main #formContainer form fieldset {
   border: none;
   display: flex;
@@ -128,6 +174,14 @@ body main #formContainer form fieldset div input:disabled, body main #formContai
 body main #formContainer form fieldset div input:focus, body main #formContainer form fieldset div textarea:focus, body main #formContainer form fieldset div select:focus {
   border: 1px solid #f3541c;
   outline: 3px solid #fee7d6;
+  box-shadow: inset 0px 0px 0px 1px #f3541c;
+}
+body main #formContainer form fieldset div input[type=file] {
+  border: 2px dashed #d6d3d1;
+  padding: 1.5rem 1rem;
+}
+body main #formContainer form fieldset div input[type=radio] {
+  outline: none;
 }
 body main #formContainer form fieldset .twoColumnInputs {
   display: grid;
