@@ -45,6 +45,24 @@ body {
                     }
                 }
 
+                .formCard:hover {
+                    border: 1px solid $stroke-highlight;
+
+                    input[type="radio"] {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        border: 1px solid $stroke-highlight;
+                        border-radius: 50%;
+                        height: 1.5rem;
+                        width: 1.5rem;
+                        padding: 0;
+                        margin: 0;
+                        -webkit-box-shadow:inset 0px 0px 0px 1px $stroke-highlight;
+                        -moz-box-shadow:inset 0px 0px 0px 1px $stroke-highlight;
+                        box-shadow:inset 0px 0px 0px 1px $stroke-highlight;
+                    }
+                }
+
                 .formCard:has(input[type="radio"]:checked) {
                     border: 1px solid $stroke-highlight;
                     -webkit-box-shadow:inset 0px 0px 0px 1px $stroke-highlight;
@@ -126,9 +144,72 @@ body {
                             }
                         }
 
-                        input[type="file"] {
+                        textarea {
+                            height: 7.5rem;
+                        }
+
+                        label + div {
+                            align-items: center;
                             border: 2px dashed $stroke-default;
+                            border-radius: 0.5rem;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.5rem;
                             padding: 1.5rem 1rem;
+                            position: relative;
+                            
+                            svg {
+                                path {
+                                    stroke: $stroke-default;
+                                }
+                            }
+
+                            p {
+                                color: #A8A29E;
+                                padding: 0 18rem;
+                                text-align: center;
+                            }
+
+                            &:hover {
+                                border-color: $stroke-highlight;
+                                background-color: $surface-secondary;
+                                transition: 200ms background-color;
+
+                                svg {
+                                    path {
+                                        stroke: $brand-light;
+                                        transition: 200ms stroke;
+                                    }
+                                }
+
+                                p {
+                                    color: $text-tertiary;
+                                    transition: 200ms color;
+                                }
+                            }
+
+                            &:not(:hover) {
+                                transition: 200ms background-color;
+
+                                svg {
+                                    path {
+                                        transition: 200ms stroke;
+                                    }
+                                }
+
+                                p {
+                                    transition: 200ms color;
+                                }
+                            }
+
+                            input[type="file"] {
+                                position: absolute;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                opacity: 0;
+                            }
                         }
 
                         input[type="radio"] {

@@ -112,6 +112,21 @@ body main #formContainer form .formCard label span {
   margin-bottom: 0.5rem;
   text-align: center;
 }
+body main #formContainer form .formCard:hover {
+  border: 1px solid #f3541c;
+}
+body main #formContainer form .formCard:hover input[type=radio] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #f3541c;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0;
+  margin: 0;
+  box-shadow: inset 0px 0px 0px 1px #f3541c;
+}
 body main #formContainer form .formCard:has(input[type=radio]:checked) {
   border: 1px solid #f3541c;
   box-shadow: inset 0px 0px 0px 1px #f3541c;
@@ -176,9 +191,56 @@ body main #formContainer form fieldset div input:focus, body main #formContainer
   outline: 3px solid #fee7d6;
   box-shadow: inset 0px 0px 0px 1px #f3541c;
 }
-body main #formContainer form fieldset div input[type=file] {
+body main #formContainer form fieldset div textarea {
+  height: 7.5rem;
+}
+body main #formContainer form fieldset div label + div {
+  align-items: center;
   border: 2px dashed #d6d3d1;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   padding: 1.5rem 1rem;
+  position: relative;
+}
+body main #formContainer form fieldset div label + div svg path {
+  stroke: #d6d3d1;
+}
+body main #formContainer form fieldset div label + div p {
+  color: #A8A29E;
+  padding: 0 18rem;
+  text-align: center;
+}
+body main #formContainer form fieldset div label + div:hover {
+  border-color: #f3541c;
+  background-color: #fee7d6;
+  transition: 200ms background-color;
+}
+body main #formContainer form fieldset div label + div:hover svg path {
+  stroke: #f67841;
+  transition: 200ms stroke;
+}
+body main #formContainer form fieldset div label + div:hover p {
+  color: #8f8881;
+  transition: 200ms color;
+}
+body main #formContainer form fieldset div label + div:not(:hover) {
+  transition: 200ms background-color;
+}
+body main #formContainer form fieldset div label + div:not(:hover) svg path {
+  transition: 200ms stroke;
+}
+body main #formContainer form fieldset div label + div:not(:hover) p {
+  transition: 200ms color;
+}
+body main #formContainer form fieldset div label + div input[type=file] {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
 }
 body main #formContainer form fieldset div input[type=radio] {
   outline: none;
