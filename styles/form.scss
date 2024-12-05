@@ -14,6 +14,10 @@ body {
                     padding: 0.5rem;
                     position: relative;
 
+                    svg {
+                        display: none;
+                    }
+
                     input {
                         position: absolute;
                         height: 1.5rem;
@@ -68,6 +72,22 @@ body {
                     -webkit-box-shadow:inset 0px 0px 0px 1px $stroke-highlight;
                     -moz-box-shadow:inset 0px 0px 0px 1px $stroke-highlight;
                     box-shadow:inset 0px 0px 0px 1px $stroke-highlight;
+
+                    svg {
+                        background-color: $brand-dark;
+                        border-radius: 50%;
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        transform: translate(0.5rem, 0.5rem);
+                        padding: 6px;
+                        z-index: 2;
+
+                        path {
+                            fill: $surface-primary;
+                        }
+                    }
                 }
 
                 #admissionOptions {
