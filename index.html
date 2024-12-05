@@ -45,8 +45,10 @@
                     <div>
                         <label for="studentGender">Sexo</label>
                         <select id="studentGender">
-                            <option value="female">Feminino</option>
-                            <option value="male">Masculino</option>
+                            <optgroup label="Selecione o gênero">
+                                <option value="female">Feminino</option>
+                                <option value="male">Masculino</option>
+                            </optgroup>
                         </select>
                     </div>
                     <div>
@@ -64,24 +66,24 @@
                         <label for="postalCode">CEP</label>
                         <input type="text" id="postalCode">
                     </div>
-                    <div>
+                    <div class="twoColumnInputs">
                         <div>
                             <label for="street">Rua</label>
-                            <input type="text" id="street" disabled>
+                            <input type="text" id="street" placeholder="Rua das Flores" disabled>
                         </div>
                         <div>
                             <label for="houseNumber">Número</label>
                             <input type="text" id="houseNumber">
                         </div>
                     </div>
-                    <div>
+                    <div class="twoColumnInputs">
                         <div>
                             <label for="city">Cidade</label>
-                            <input type="text" id="city" disabled>
+                            <input type="text" id="city" placeholder="São Paulo" disabled>
                         </div>
                         <div>
                             <label for="province">Estado</label>
-                            <input type="text" id="province" disabled>
+                            <input type="text" id="province" placeholder="SP" disabled>
                         </div>
                     </div>
                 </fieldset>
@@ -90,7 +92,7 @@
                     <div>
                         <label for="">Nome do responsável</label>
                         <input type="text" id="parentName">
-                        <p>
+                        <p class="helperText">
                             Principal responsável legal e contato de emergência
                         </p>
                     </div>

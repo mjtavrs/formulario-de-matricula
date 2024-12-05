@@ -73,4 +73,60 @@ body main aside #asideHeader h1 span {
 }
 body main aside #illustration {
   width: 100%;
+}
+
+body main #formContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+body main #formContainer form fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+body main #formContainer form fieldset .helperText {
+  color: #8f8881;
+  font-size: 0.875rem;
+  line-height: 140%;
+}
+body main #formContainer form fieldset legend {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 125%;
+  margin-bottom: 1.5rem;
+}
+body main #formContainer form fieldset div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+body main #formContainer form fieldset div label {
+  color: #57534e;
+  font-size: 0.875rem;
+  line-height: 140%;
+}
+body main #formContainer form fieldset div input, body main #formContainer form fieldset div textarea, body main #formContainer form fieldset div select {
+  border: 1px solid #d6d3d1;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  line-height: 150%;
+  padding: 0.75rem 1rem;
+}
+body main #formContainer form fieldset div input::-moz-placeholder, body main #formContainer form fieldset div textarea::-moz-placeholder, body main #formContainer form fieldset div select::-moz-placeholder {
+  color: #8f8881;
+}
+body main #formContainer form fieldset div input::placeholder, body main #formContainer form fieldset div textarea::placeholder, body main #formContainer form fieldset div select::placeholder {
+  color: #8f8881;
+}
+body main #formContainer form fieldset div input:disabled, body main #formContainer form fieldset div textarea:disabled, body main #formContainer form fieldset div select:disabled {
+  background-color: #e7e5e4;
+  border: 1px solid #d6d3d1;
+  color: #292524;
+}
+body main #formContainer form fieldset .twoColumnInputs {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1.25rem;
 }/*# sourceMappingURL=form.css.map */
