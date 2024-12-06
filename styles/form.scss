@@ -107,6 +107,33 @@ body {
                             }
                         }
 
+                        input[type="date"] {
+                            position: relative;
+
+                            &::-webkit-calendar-picker-indicator {
+                                opacity: 0;
+                            }
+
+                            &::before {
+                                content: "";
+                                background: url("../assets/images/svg/icons/calendar.svg") center/contain;
+                                right: 1rem;
+                                width: 1.25rem;
+                                height: 1.25rem;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                
+                            }
+                        }
+
+                        select {
+                            background: url("../assets/images/svg/icons/arrow-down.svg") no-repeat calc(100% - 1rem);
+                            appearance: none;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                        }
+
                         textarea {
                             height: 7.5rem;
                         }
