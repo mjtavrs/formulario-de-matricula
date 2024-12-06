@@ -32,13 +32,15 @@
                 </div>
             </section>
             <form action="/" method="post">
-                <fieldset id="studentInfo">
-                    <legend>Informações da criança</legend>
+                <section id="studentInfo">
+                    <p class="">
+                        Informações da criança
+                    </p>
                     <div>
                         <label for="studentName">Nome completo</label>
                         <input type="text" id="studentName">
                     </div>
-                    <div>
+                     <div>
                         <label for="studentDateOfBirth">Data de nascimento</label>
                         <input type="date" id="studentDateOfBirth">
                     </div>
@@ -66,9 +68,9 @@
                             <input type="file" id="studentBirthCertificate">
                         </div>
                     </div>
-                </fieldset>
-                <fieldset id="addressInfo">
-                    <legend>Endereço residencial</legend>
+                </section>
+                <section id="addressInfo">
+                    <p>Endereço residencial</p>
                     <div>
                         <label for="postalCode">CEP</label>
                         <input type="text" id="postalCode">
@@ -93,9 +95,9 @@
                             <input type="text" id="province" placeholder="SP" disabled>
                         </div>
                     </div>
-                </fieldset>
-                <fieldset id="parentInfo">
-                    <legend>Informações do responsável</legend>
+                </section>
+                <section id="parentInfo">
+                    <p>Informações do responsável</p>
                     <div>
                         <label for="">Nome do responsável</label>
                         <input type="text" id="parentName">
@@ -111,10 +113,10 @@
                         <label for="">E-mail</label>
                         <input type="email" id="parentEmail">
                     </div>
-                </fieldset>
-                <fieldset id="admissionOptions">
-                    <legend>Opções de matrícula</legend>
-                    <fieldset id="schoolShiftContainer">
+                </section>
+                <section id="admissionOptions">
+                    <p>Opções de matrícula</p>
+                    <section id="schoolShiftContainer">
                         <legend>Selecione o turno de estudo</legend>
                         <div id="schoolShiftOptions">
                             <div class="formCard">
@@ -138,8 +140,8 @@
                                 </label>
                             </div>
                         </div>
-                    </fieldset>
-                    <fieldset id="schoolSportsContainer">
+                    </section>
+                    <section id="schoolSportsContainer">
                         <legend>Em qual esporte você gostaria de inscrever seu(ua) filho(a)?</legend>
                         <div id="schoolSportsOptions">
                             <div class="formCard">
@@ -203,8 +205,8 @@
                                 </label>
                             </div>
                         </div>
-                    </fieldset>
-                </fieldset>
+                    </section>
+                </section>
                 <div id="agreeWithConditionsContainer">
                     <input type="checkbox" id="agreeWithConditions">
                     <label for="agreeWithConditions">

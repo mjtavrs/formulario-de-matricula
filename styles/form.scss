@@ -3,11 +3,208 @@
 body {
     main {
         #formContainer {
-            form {
-                display: flex;
-                flex-direction: column;
-                gap: 3rem;
+            display: flex;
+            flex-direction: column;
 
+            #formHeader {
+                width: 100%;
+            }
+
+            form {
+                border: 1px solid transparent;
+                gap: 3rem;
+                width: 100%;
+
+                section {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+
+                    .helperText {
+                        color: $text-tertiary;
+                        font-size: 0.875rem;
+                        line-height: 140%;
+                    }                    
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.25rem;
+                        width: auto;
+    
+                        label {
+                            color: $text-secondary;
+                            font-size: 0.875rem;
+                            line-height: 140%;
+                        }
+    
+                        input, select, textarea {
+                            border: 1px solid $stroke-default;
+                            border-radius: 0.5rem;
+                            box-sizing: content-box;
+                            font-size: 1rem;
+                            line-height: 150%;
+                            padding: 0.75rem 1rem;
+                            max-width: 100%;
+    
+                            &::placeholder {
+                                color: $text-tertiary;
+                            }
+    
+                            &:disabled {
+                                background-color: $surface-disabled;
+                                border: 1px solid $stroke-default;
+                                color: $text-primary;
+                            }
+    
+                            &:focus {
+                                border: 1px solid $stroke-highlight;
+                                outline: 3px solid $surface-secondary;
+                                -webkit-box-shadow:inset 0px 0px 0px 1px $stroke-highlight;
+                                -moz-box-shadow:inset 0px 0px 0px 1px $stroke-highlight;
+                                box-shadow:inset 0px 0px 0px 1px $stroke-highlight;                                
+                            }
+                        }
+
+                        textarea {
+                            height: 7.5rem;
+                        }
+
+                        label + div {
+                            align-items: center;
+                            border: 2px dashed $stroke-default;
+                            border-radius: 0.5rem;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.5rem;
+                            padding: 1.5rem 1rem;
+                            position: relative;
+                            
+                            svg {
+                                path {
+                                    stroke: $stroke-default;
+                                }
+                            }
+
+                            p {
+                                color: #A8A29E;
+                                padding: 0 18rem;
+                                text-align: center;
+                            }
+
+                            &:hover {
+                                border-color: $stroke-highlight;
+                                background-color: $surface-secondary;
+                                transition: 200ms background-color;
+
+                                svg {
+                                    path {
+                                        stroke: $brand-light;
+                                        transition: 200ms stroke;
+                                    }
+                                }
+
+                                p {
+                                    color: $text-tertiary;
+                                    transition: 200ms color;
+                                }
+                            }
+
+                            &:not(:hover) {
+                                transition: 200ms background-color;
+
+                                svg {
+                                    path {
+                                        transition: 200ms stroke;
+                                    }
+                                }
+
+                                p {
+                                    transition: 200ms color;
+                                }
+                            }
+
+                            input[type="file"] {
+                                position: absolute;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                opacity: 0;
+                            }
+                        }
+                        
+                        input[type="radio"] {
+                            outline: none;
+                        }
+                    }
+                    
+                    .twoColumnInputs {
+                        display: grid;
+                        grid-template-columns: 3fr 1fr;
+                        gap: 1.25rem;
+                    }
+                }
+
+                #admissionOptions {
+                    #schoolShiftContainer {
+                        #schoolShiftOptions {
+                            display: grid;
+                            gap: 1rem;
+                            grid-template-columns: 1fr 1fr;
+                        }
+                    }
+
+                    #schoolSportsContainer {
+                        #schoolSportsOptions {
+                            display: grid;
+                            gap: 1rem;
+                            grid-template-columns: repeat(4, 1fr);
+                        }
+                    }
+                }
+
+                #buttonsContainer {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 1rem;
+                    margin-top: 1rem;
+
+                    .whiteButton, .orangeButton {
+                        border: none;
+                        border-radius: 0.5rem;
+                        cursor: pointer;
+                        font-size: 1rem;
+                        font-weight: 500;
+                        line-height: 150%;
+                        padding: 0.75rem 1.5rem;
+                    }
+
+                    .whiteButton {
+                        background-color: $surface-primary;
+                        border: 1px solid $text-highlight;
+                        color: $text-highlight;
+
+                        &:hover {
+                            outline: 3px solid $surface-secondary;
+                        }
+                    }
+
+                    .orangeButton {
+                        background-color: $brand-dark;
+                        color: $surface-primary;
+
+                        &:hover {
+                            background-color: $brand-mid;
+                            transition: 500ms background-color;
+                        }
+
+                        &:not(:hover) {
+                            transition: 500ms background-color;
+                        }
+                    }
+                }
+    
                 .formCard {
                     border: 1px solid $stroke-default;
                     border-radius: 0.5rem;
@@ -90,200 +287,6 @@ body {
                     }
                 }
 
-                #admissionOptions {
-                    #schoolShiftContainer {
-                        #schoolShiftOptions {
-                            display: grid;
-                            gap: 1rem;
-                            grid-template-columns: 1fr 1fr;
-                        }
-                    }
-
-                    #schoolSportsContainer {
-                        #schoolSportsOptions {
-                            display: grid;
-                            gap: 1rem;
-                            grid-template-columns: repeat(4, 1fr);
-                        }
-                    }
-                }
-
-                fieldset {
-                    border: none;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1.5rem;
-
-                    .helperText {
-                        color: $text-tertiary;
-                        font-size: 0.875rem;
-                        line-height: 140%;
-                    }
-
-                    legend {
-                        font-size: 1rem;
-                        font-weight: 600;
-                        line-height: 125%;
-                        margin-bottom: 1.5rem;
-                    }
-
-                    div {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 0.25rem;
-
-                        label {
-                            color: $text-secondary;
-                            font-size: 0.875rem;
-                            line-height: 140%;
-                        }
-
-                        input, textarea, select {
-                            border: 1px solid $stroke-default;
-                            border-radius: 0.5rem;
-                            font-size: 1rem;
-                            line-height: 150%;
-                            padding: 0.75rem 1rem;
-
-                            &::placeholder {
-                                color: $text-tertiary;
-                            }
-
-                            &:disabled {
-                                background-color: $surface-disabled;
-                                border: 1px solid $stroke-default;
-                                color: $text-primary;
-                            }
-
-                            &:focus {
-                                border: 1px solid $stroke-highlight;
-                                outline: 3px solid $surface-secondary;
-                                -webkit-box-shadow:inset 0px 0px 0px 1px $stroke-highlight;
-                                -moz-box-shadow:inset 0px 0px 0px 1px $stroke-highlight;
-                                box-shadow:inset 0px 0px 0px 1px $stroke-highlight;                                
-                            }
-                        }
-
-                        textarea {
-                            height: 7.5rem;
-                        }
-
-                        label + div {
-                            align-items: center;
-                            border: 2px dashed $stroke-default;
-                            border-radius: 0.5rem;
-                            display: flex;
-                            flex-direction: column;
-                            gap: 0.5rem;
-                            padding: 1.5rem 1rem;
-                            position: relative;
-                            
-                            svg {
-                                path {
-                                    stroke: $stroke-default;
-                                }
-                            }
-
-                            p {
-                                color: #A8A29E;
-                                padding: 0 18rem;
-                                text-align: center;
-                            }
-
-                            &:hover {
-                                border-color: $stroke-highlight;
-                                background-color: $surface-secondary;
-                                transition: 200ms background-color;
-
-                                svg {
-                                    path {
-                                        stroke: $brand-light;
-                                        transition: 200ms stroke;
-                                    }
-                                }
-
-                                p {
-                                    color: $text-tertiary;
-                                    transition: 200ms color;
-                                }
-                            }
-
-                            &:not(:hover) {
-                                transition: 200ms background-color;
-
-                                svg {
-                                    path {
-                                        transition: 200ms stroke;
-                                    }
-                                }
-
-                                p {
-                                    transition: 200ms color;
-                                }
-                            }
-
-                            input[type="file"] {
-                                position: absolute;
-                                height: 100%;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                opacity: 0;
-                            }
-                        }
-
-                        input[type="radio"] {
-                            outline: none;
-                        }
-                    }
-
-                    .twoColumnInputs {
-                        display: grid;
-                        grid-template-columns: 3fr 1fr;
-                        gap: 1.25rem;
-                    }
-                }
-
-                #buttonsContainer {
-                    display: flex;
-                    justify-content: flex-end;
-                    gap: 1rem;
-                    margin-top: 1rem;
-
-                    .whiteButton, .orangeButton {
-                        border: none;
-                        border-radius: 0.5rem;
-                        cursor: pointer;
-                        font-size: 1rem;
-                        font-weight: 500;
-                        line-height: 150%;
-                        padding: 0.75rem 1.5rem;
-                    }
-
-                    .whiteButton {
-                        background-color: $surface-primary;
-                        border: 1px solid $text-highlight;
-                        color: $text-highlight;
-
-                        &:hover {
-                            outline: 3px solid $surface-secondary;
-                        }
-                    }
-
-                    .orangeButton {
-                        background-color: $brand-dark;
-                        color: $surface-primary;
-
-                        &:hover {
-                            background-color: $brand-mid;
-                            transition: 500ms background-color;
-                        }
-
-                        &:not(:hover) {
-                            transition: 500ms background-color;
-                        }
-                    }
-                }
             }
         }
     }
