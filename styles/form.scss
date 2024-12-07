@@ -97,6 +97,22 @@ body {
                                 border: 1px solid $stroke-default;
                                 color: $text-primary;
                             }
+
+                            &:invalid {
+                                border: 1px solid $semantic-error;
+                                -webkit-box-shadow:inset 0px 0px 0px 1px $semantic-error;
+                                -moz-box-shadow:inset 0px 0px 0px 1px $semantic-error;
+                                box-shadow:inset 0px 0px 0px 1px $semantic-error;                                
+
+                                &:focus {
+                                    outline: none;
+                                }
+
+                                &::before {
+                                    content: "Erro";
+                                    color: red;
+                                }
+                            }
     
                             &:focus {
                                 border: 1px solid $stroke-highlight;
@@ -123,7 +139,6 @@ body {
                                 position: absolute;
                                 top: 50%;
                                 transform: translateY(-50%);
-                                
                             }
                         }
 

@@ -163,6 +163,17 @@ body main #formContainer form section div input:disabled, body main #formContain
   border: 1px solid #d6d3d1;
   color: #292524;
 }
+body main #formContainer form section div input:invalid, body main #formContainer form section div select:invalid, body main #formContainer form section div textarea:invalid {
+  border: 1px solid #dc2626;
+  box-shadow: inset 0px 0px 0px 1px #dc2626;
+}
+body main #formContainer form section div input:invalid:focus, body main #formContainer form section div select:invalid:focus, body main #formContainer form section div textarea:invalid:focus {
+  outline: none;
+}
+body main #formContainer form section div input:invalid::before, body main #formContainer form section div select:invalid::before, body main #formContainer form section div textarea:invalid::before {
+  content: "Erro";
+  color: red;
+}
 body main #formContainer form section div input:focus, body main #formContainer form section div select:focus, body main #formContainer form section div textarea:focus {
   border: 1px solid #f3541c;
   outline: 3px solid #fee7d6;
